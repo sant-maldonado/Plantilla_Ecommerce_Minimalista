@@ -30,7 +30,7 @@ export default function Hero() {
         </div>
         <div className="relative">
           <img
-            src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&h=400&fit=crop"
+            src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?w=600&h=400&fit=crop"
             alt="Bicicleta urbana"
             className="rounded-2xl shadow-xl w-full object-cover"
           />

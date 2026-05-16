@@ -4,7 +4,7 @@ export const bikes = [
     name: "Urbana Classic",
     category: "Urbana",
     price: 450,
-    image: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=600&h=400&fit=crop",
     description: "Perfecta para city rides, cuadro de aluminio ligero"
   },
   {
@@ -12,7 +12,7 @@ export const bikes = [
     name: "Mountain Pro",
     category: "Montaña",
     price: 890,
-    image: "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=600&h=400&fit=crop",
     description: "Suspensión frontal, ideal para senderos"
   },
   {
@@ -20,7 +20,7 @@ export const bikes = [
     name: "Road Speed",
     category: "Carretera",
     price: 1200,
-    image: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=600&h=400&fit=crop",
     description: "Cuadro de carbono, rendimiento máximo"
   },
   {
@@ -28,7 +28,7 @@ export const bikes = [
     name: "City Cruiser",
     category: "Urbana",
     price: 380,
-    image: "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1505705694340-019e1e335916?w=600&h=400&fit=crop",
     description: "Estilo retro, cómoda para el día a día"
   },
   {
@@ -36,7 +36,7 @@ export const bikes = [
     name: "Elite MTB",
     category: "Montaña",
     price: 1450,
-    image: "https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=600&h=400&fit=crop",
     description: "Suspensión completa, disco hidráulico"
   },
   {
@@ -44,57 +44,73 @@ export const bikes = [
     name: "Fixie Original",
     category: "Fija",
     price: 520,
-    image: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1541625602330-2277a4c46182?w=600&h=400&fit=crop",
     description: "Diseño minimalista, cuadro acero"
-  } ,
-{
+  },
+  {
     id: 7,
-    name: "Urbana Classic",
-    category: "Urbana",
-    price: 450,
-    image: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&h=400&fit=crop",
-    description: "Perfecta para city rides, cuadro de aluminio ligero"
+    name: "XC Sport",
+    category: "Montaña",
+    price: 550,
+    image: "https://images.unsplash.com/photo-1511994298241-608e28f14fde?w=600&h=400&fit=crop",
+    description: "Cuadro aluminio, suspensión SR Suntour, 21 velocidades"
   },
   {
     id: 8,
-    name: "Mountain Pro",
+    name: "Trail Basic",
     category: "Montaña",
-    price: 890,
-    image: "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=400&h=300&fit=crop",
-    description: "Suspensión frontal, ideal para senderos"
+    price: 650,
+    image: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=600&h=400&fit=crop",
+    description: "Ideal para senderos, cuadro de aleación, frenos mecánicos"
   },
   {
     id: 9,
-    name: "Road Speed",
-    category: "Carretera",
-    price: 1200,
-    image: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=400&h=300&fit=crop",
-    description: "Cuadro de carbono, rendimiento máximo"
+    name: "All Mountain",
+    category: "Montaña",
+    price: 750,
+    image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=600&h=400&fit=crop",
+    description: "Suspensión Rockshox, cuadros de carbono, transmisión Shimano"
   },
   {
     id: 10,
-    name: "City Cruiser",
-    category: "Urbana",
-    price: 380,
-    image: "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=400&h=300&fit=crop",
-    description: "Estilo retro, cómoda para el día a día"
+    name: "Enduro Pro",
+    category: "Montaña",
+    price: 850,
+    image: "https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=600&h=400&fit=crop",
+    description: "160mm recorrido, para descensos extremos, cuadro alloy"
   },
   {
     id: 11,
-    name: "Elite MTB",
+    name: "Downhill Elite",
     category: "Montaña",
-    price: 1450,
-    image: "https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=400&h=300&fit=crop",
-    description: "Suspensión completa, disco hidráulico"
+    price: 950,
+    image: "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=600&h=400&fit=crop",
+    description: "200mm suspensión, para competencias, freeride"
   },
   {
     id: 12,
-    name: "Fixie Original",
-    category: "Fija",
-    price: 520,
+    name: "Fat Bike Winter",
+    category: "Montaña",
+    price: 700,
     image: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&h=400&fit=crop",
-    description: "Diseño minimalista, cuadro acero"
-  } 
+    description: "Ruedas 4.8\", parfait para nieve y arena, cuadro acero"
+  },
+  {
+    id: 13,
+    name: "Trail Advanced",
+    category: "Montaña",
+    price: 800,
+    image: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=600&h=400&fit=crop",
+    description: "Mixta carbono/aluminio, grupaje Deore,hidraulicos"
+  },
+  {
+    id: 14,
+    name: "Mountain Junior",
+    category: "Montaña",
+    price: 500,
+    image: "https://images.unsplash.com/photo-1511994298241-608e28f14fde?w=600&h=400&fit=crop",
+    description: "Para jóvenes, cuadro 26\", transmisión Shimano 18 velocidades"
+  }
 ];
 
 export const features = [
