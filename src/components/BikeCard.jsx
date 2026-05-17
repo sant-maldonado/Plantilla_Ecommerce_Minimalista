@@ -1,4 +1,4 @@
-export default function BikeCard({ bike }) {
+export default function BikeCard({ bike, addToCart }) {
   return (
     <div className="group bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300">
       <div className="aspect-[4/3] overflow-hidden bg-gray-100">
@@ -18,8 +18,11 @@ export default function BikeCard({ bike }) {
           <span className="text-xl font-semibold text-gray-900">
             ${bike.price.toLocaleString()}
           </span>
-          <button className="text-sm bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
-            Ver más
+          <button 
+            onClick={() => addToCart(bike)}
+            className="text-sm bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
+          >
+            Agregar al carrito
           </button>
         </div>
       </div>

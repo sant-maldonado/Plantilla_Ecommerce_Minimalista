@@ -1,7 +1,11 @@
+import { useContext } from 'react';
 import BikeCard from './BikeCard';
 import { bikes } from '../data/bikes';
+import { CartContext } from '../context/CartContext';
 
 export default function BikeGrid() {
+  const { addToCart } = useContext(CartContext);
+
   return (
     <section id="catalogo" className="py-16 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
@@ -11,7 +15,7 @@ export default function BikeGrid() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {bikes.map((bike) => (
-            <BikeCard key={bike.id} bike={bike} />
+            <BikeCard key={bike.id} bike={bike} addToCart={addToCart} />
           ))}
         </div>
       </div>
