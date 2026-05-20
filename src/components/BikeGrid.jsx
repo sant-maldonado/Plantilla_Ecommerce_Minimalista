@@ -1,7 +1,7 @@
-import { useContext, useState } from 'react';
-import BikeCard from './BikeCard';
-import { bikes } from '../data/bikes';
-import { CartContext } from '../context/CartContext';
+import { useContext, useState } from 'react'
+import BikeCard from './BikeCard'
+import { CartContext } from '../context/CartContext'
+import { useProducts } from '../context/ProductContext'
 
 const categories = [
   { id: 'todos', label: 'Todos' },
@@ -9,15 +9,26 @@ const categories = [
   { id: 'Montaña', label: 'Montaña' },
   { id: 'Carretera', label: 'Carretera' },
   { id: 'Fija', label: 'Fija' },
-];
+]
 
 export default function BikeGrid() {
-  const { addToCart } = useContext(CartContext);
-  const [activeCategory, setActiveCategory] = useState('todos');
+  const { addToCart } = useContext(CartContext)
+  const { products, loading } = useProducts()
+  const [activeCategory, setActiveCategory] = useState('todos')
 
-  const filteredBikes = activeCategory === 'todos' 
-    ? bikes 
-    : bikes.filter(bike => bike.category === activeCategory);
+  const filteredProducts = activeCategory === 'todos' 
+    ? products 
+    : products.filter(product => product.category === activeCategory)
+
+  if (loading) {
+    return (
+      <section id="catalogo" className="py-16 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-gray-500">Cargando catálogo...</p>
+        </div>
+      </section>
+    )
+  }
 
   return (
     <section id="catalogo" className="py-16 px-6 bg-gray-50">
@@ -44,17 +55,17 @@ export default function BikeGrid() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredBikes.map((bike) => (
-            <BikeCard key={bike.id} bike={bike} addToCart={addToCart} />
+          {filteredProducts.map((product) => (
+            <BikeCard key={product.id} bike={product} addToCart={addToCart} />
           ))}
         </div>
 
-        {filteredBikes.length === 0 && (
+        {filteredProducts.length === 0 && (
           <p className="text-center text-gray-500 py-8">
             No hay bicis en esta categoría.
           </p>
         )}
       </div>
     </section>
-  );
+  )
 }
