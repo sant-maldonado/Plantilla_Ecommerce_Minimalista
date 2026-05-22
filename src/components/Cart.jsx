@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
+
+
+const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER || "5493413502389"
 const Cart = () => {
   const { cart, clearCart, removeFromCart } = useContext(CartContext);
 
@@ -8,7 +11,7 @@ const Cart = () => {
 
   const handleCheckout = () => {
     const message = cart.map(p => `${p.name} - $${p.price.toLocaleString()}`).join("%0A");
-    const url = `https://wa.me/5493413502389?text=Hola! Quiero comprar:%0A${message}%0A%0ATotal: $${total.toLocaleString()}`;
+    const url = `https://wa.me/${phoneNumber}?text=Hola! Quiero comprar:%0A${message}%0A%0ATotal: $${total.toLocaleString()}`;
     window.open(url, "_blank");
     clearCart();
   };

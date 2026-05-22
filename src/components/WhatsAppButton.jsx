@@ -1,5 +1,5 @@
 export default function WhatsAppButton() {
-  const phoneNumber = "5493413502389";
+  const phoneNumber = import.meta.env.VITE_WHATSAPP_NUMBER || "5493413502389";
 
   return (
     <a
