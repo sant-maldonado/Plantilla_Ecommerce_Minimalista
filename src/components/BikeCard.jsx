@@ -1,6 +1,8 @@
-export default function BikeCard({ bike, addToCart }) {
+import { Link } from 'react-router-dom'
+
+export default function BikeCard({ bike }) {
   return (
-    <div className="group bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300">
+    <Link to={`/bici/${bike.id}`} className="group bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300 block">
       <div className="aspect-[4/3] overflow-hidden bg-gray-100">
         <img
           src={bike.image}
@@ -18,14 +20,11 @@ export default function BikeCard({ bike, addToCart }) {
           <span className="text-xl font-semibold text-gray-900">
             ${bike.price.toLocaleString()}
           </span>
-          <button 
-            onClick={() => addToCart(bike)}
-            className="text-sm bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
-          >
-            Agregar al carrito
-          </button>
+          <span className="text-sm font-medium text-gray-900 border border-gray-300 rounded-full px-4 py-1.5 group-hover:bg-gray-900 group-hover:text-white group-hover:border-gray-900 transition-all duration-300">
+            Ver más <span className="inline-block group-hover:translate-x-0.5 transition-transform">→</span>
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

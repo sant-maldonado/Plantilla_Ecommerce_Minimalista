@@ -11,7 +11,9 @@ import Contact from "./components/Contact";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import Footer from "./components/Footer";
+import BikeDetail from "./components/BikeDetail";
 import Admin from "./components/Admin";
+import ScrollToTop from "./components/ScrollToTop";
 
 function AppContent() {
   const currentPath = window.location.pathname
@@ -24,6 +26,7 @@ function AppContent() {
         <Route path="/" element={<><Hero /><BikeGrid /><About /><Features /><Testimonials /><Contact /></>} />
         <Route path="/carrito" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/bici/:id" element={<BikeDetail />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
       {!isAdmin && <Footer />}
@@ -36,6 +39,7 @@ function App() {
     <ProductProvider>
       <CartProvider>
         <Router>
+          <ScrollToTop />
           <AppContent />
         </Router>
       </CartProvider>
